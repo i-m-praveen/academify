@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand palette */
+  --c-primary: #0b68b0;
+  --c-primary-dark: #084d82;
+  --c-primary-light: #1a85d6;
+  --c-primary-xlight: #e6f2fb;
+  --c-white: #ffffff;
+
+  /* Page chrome */
+  --c-page-bg: #f0f5fa;
+  --c-border: #dde6ef;
+
+  /* Text */
+  --c-text: #1e2d3d;
+  --c-text-muted: #637485;
+
+  /* Semantic colours */
+  --c-success: #0a8c5f;
+  --c-warning: #c9820a;
+  --c-danger: #d63031;
+  --c-info: #0891b2;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgba(11, 104, 176, 0.06);
+  --shadow-sm: 0 2px 8px rgba(11, 104, 176, 0.08);
+  --shadow-md: 0 4px 16px rgba(11, 104, 176, 0.1);
+
+  /* Shape */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-xs: 6px;
+}
+
+* {
+  border-color: var(--c-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--c-page-bg);
+  color: var(--c-text);
+}
+
+::selection {
+  background-color: var(--c-primary-light);
+  color: var(--c-white);
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

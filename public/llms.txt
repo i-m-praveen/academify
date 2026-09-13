@@ -1,0 +1,41 @@
+# Academify
+
+> Academify is a B2B assessment platform and infrastructure provider for
+> schools, coaching institutes, and education organizations. It is not a
+> single-event Olympiad site — Olympiad hosting is one capability among
+> several.
+
+## What Academify does
+
+- **Olympiad hosting**: white-labeled, multi-client Olympiad delivery for
+  institutions and organizations, including recurring seasonal editions
+  (e.g. summer and winter cycles).
+- **Institutional question bank management**: schools and institutes build
+  and maintain their own tagged, reusable question repositories, organized
+  by subject, topic, and difficulty.
+- **Daily practice and milestone tests**: recurring practice assessments and
+  periodic milestone tests for students, delivered and scored automatically.
+- **Analytics and reporting**: score trends, percentile and cohort
+  comparisons, and exportable reports for institutes and client
+  organizations.
+
+## Audience
+
+Academify sells to institutions, not individual consumers: schools,
+coaching institutes, and organizations that conduct Olympiads or other
+large-scale assessments for their students or member institutions.
+
+## Key pages
+
+- Homepage: https://www.academify.example/
+- Platform overview: https://www.academify.example/platform
+- For institutes: https://www.academify.example/solutions/institutes
+- For Olympiad organizers: https://www.academify.example/solutions/olympiad-organizers
+- About: https://www.academify.example/about
+- Contact / request a demo: https://www.academify.example/contact
+- Blog: https://www.academify.example/blog
+
+## Contact
+
+Prospective institutional clients can request a demo via the contact page
+above. Academify does not offer self-serve pricing or a consumer product.
