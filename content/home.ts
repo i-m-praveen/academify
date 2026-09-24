@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BarChart3, Layers, MonitorCheck, ShieldCheck } from "lucide-react";
+import { BarChart3, GraduationCap, Layers, MonitorCheck, School, ShieldCheck, Trophy } from "lucide-react";
 
 export const hero = {
   headline: "Secure online exams for Olympiads and institutions",
@@ -9,15 +9,13 @@ export const hero = {
   secondaryCta: { label: "See how it works", href: "#how-it-works" },
 };
 
-export const trustBar = {
-  label: "Trusted by institutions across India",
-  logos: [
-    "[LOGO: Partner Institute 1]",
-    "[LOGO: Partner Institute 2]",
-    "[LOGO: Partner Institute 3]",
-    "[LOGO: Partner Institute 4]",
-    "[LOGO: Partner Institute 5]",
-  ],
+export const audienceBar = {
+  label: "Built for",
+  audiences: [
+    { icon: School, label: "Schools" },
+    { icon: GraduationCap, label: "Coaching institutes" },
+    { icon: Trophy, label: "Olympiad organizers" },
+  ] as { icon: LucideIcon; label: string }[],
 };
 
 export type Capability = {
@@ -99,32 +97,59 @@ export const productVisual = {
   placeholderLabel: "[SCREENSHOT: Admin dashboard with exam statistics and score distribution]",
 };
 
-export const testimonials = [
-  {
-    quote:
-      "[Placeholder testimonial] Academify let us run our institute's Olympiad program without building any of the underlying testing infrastructure ourselves.",
-    name: "[Placeholder Name]",
-    role: "[Placeholder Title, Placeholder Institute]",
-  },
-  {
-    quote:
-      "[Placeholder testimonial] The question bank tagging alone saved our academic team weeks of manual work every term.",
-    name: "[Placeholder Name]",
-    role: "[Placeholder Title, Placeholder Institute]",
-  },
-  {
-    quote:
-      "[Placeholder testimonial] Analytics gave our coordinators a clear, exportable view of student performance across every test cycle.",
-    name: "[Placeholder Name]",
-    role: "[Placeholder Title, Placeholder Institute]",
-  },
-];
+export const faq = {
+  eyebrow: "FAQ",
+  title: "Questions institutions ask us",
+  description: "Straight answers about how exams run on Academify.",
+  items: [
+    {
+      question: "Do students need a webcam?",
+      answer:
+        "Only if you turn on webcam proctoring for that test. Proctoring and fullscreen options are chosen test by test, so a routine class test can run without a camera while an Olympiad sitting uses full proctoring.",
+    },
+    {
+      question: "What happens if a student's internet connection drops?",
+      answer:
+        "Answers are saved as the student goes, and a save that fails is retried automatically. The disconnection is recorded against the candidate so your team can review it afterwards.",
+    },
+    {
+      question: "What if a student refreshes the page or their browser closes mid-exam?",
+      answer:
+        "They log back in and continue the same attempt with their saved answers. The timer keeps running from the original start time, and the page refresh is logged as a proctoring event.",
+    },
+    {
+      question: "What happens when time runs out?",
+      answer:
+        "The test is submitted automatically with every answer the student has saved, so no one needs to click Submit at the last second.",
+    },
+    {
+      question: "How strict is the proctoring?",
+      answer:
+        "You decide. Each test has a violation limit: candidates see a warning each time a counted violation is detected, and you can choose to auto-submit the test once the limit is reached. You also choose which violation types count toward that limit and which are only logged.",
+    },
+    {
+      question: "Can we use our own questions?",
+      answer:
+        "Yes. Add questions one at a time or upload them in bulk from an Excel template, organized by class, subject, topic, subtopic, and difficulty. MCQ, text, and match-the-column question types are supported.",
+    },
+    {
+      question: "Can students take tests on a phone?",
+      answer:
+        "Yes. The student exam screen is mobile-responsive, with the same section tabs, question palette, and Mark for Review options as on a desktop.",
+    },
+    {
+      question: "When do students see their results?",
+      answer:
+        "You choose, test by test, whether students see their result. Ranks and peer comparison are only calculated and shown once you finalize results for that sitting.",
+    },
+  ],
+};
 
 export const stats = [
-  { value: "0,00,000+", label: "Students assessed (placeholder)" },
-  { value: "000+", label: "Institutes onboarded (placeholder)" },
-  { value: "0,000+", label: "Tests conducted (placeholder)" },
-  { value: "00+", label: "Client organizations (placeholder)" },
+  { value: "12", label: "Proctoring violation types detected" },
+  { value: "3", label: "Question types: MCQ, text, and match-the-column" },
+  { value: "4", label: "User roles, from Super Admin to Student" },
+  { value: "Excel", label: "Bulk question upload and full report export" },
 ];
 
 export const finalCta = {

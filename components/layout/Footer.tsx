@@ -85,7 +85,6 @@ export function Footer() {
                 {siteConfig.phone}
               </a>
             </li>
-            <li className="text-sm text-ink-muted">{siteConfig.address}</li>
           </ul>
         </div>
       </Container>

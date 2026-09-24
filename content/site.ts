@@ -8,7 +8,6 @@ export const siteConfig = {
   ogImage: "/og-image.png",
   email: "hello@academify.example",
   phone: "+91 00000 00000",
-  address: "Placeholder Address, City, State, India",
   social: {
     linkedin: "https://www.linkedin.com/company/academify",
     twitter: "https://twitter.com/academify",

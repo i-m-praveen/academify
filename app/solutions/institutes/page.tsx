@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { UseCaseGrid } from "@/components/sections/UseCaseGrid";
-import { CaseStudyBlock } from "@/components/sections/CaseStudyBlock";
+import { Walkthrough } from "@/components/sections/Walkthrough";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { institutesSolution } from "@/content/solutions";
@@ -29,10 +29,7 @@ export default function InstitutesSolutionPage() {
         description={institutesSolution.hero.description}
       />
       <UseCaseGrid useCases={institutesSolution.useCases} />
-      <CaseStudyBlock
-        label={institutesSolution.caseStudy.label}
-        summary={institutesSolution.caseStudy.summary}
-      />
+      <Walkthrough walkthrough={institutesSolution.walkthrough} />
       <CtaBanner
         title="Bring your institute's tests onto one platform"
         description="Request a demo to see the question bank, test publishing, and student reports in action."

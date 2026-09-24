@@ -3,10 +3,10 @@ import { stats } from "@/content/home";
 
 export function StatsBar() {
   return (
-    <section className="bg-primary py-16" aria-label="Academify by the numbers">
+    <section className="bg-primary py-16" aria-label="Academify at a glance">
       <Container>
         <p className="text-center text-xs font-semibold uppercase tracking-wide text-white/70">
-          Placeholder figures — to be replaced with verified numbers
+          The platform at a glance
         </p>
         <dl className="mt-6 grid grid-cols-2 gap-8 lg:grid-cols-4">
           {stats.map((stat) => (

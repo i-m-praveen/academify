@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
-import { PlaceholderVisual } from "@/components/ui/PlaceholderVisual";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { contactContent } from "@/content/contact";
 import { siteConfig } from "@/content/site";
@@ -58,13 +57,23 @@ export default function ContactPage() {
                     {siteConfig.phone}
                   </a>
                 </li>
-                <li className="flex items-start gap-3 text-sm text-ink-muted">
-                  <MapPin className="mt-0.5 h-4 w-4 text-primary" aria-hidden="true" />
-                  {siteConfig.address}
-                </li>
               </ul>
             </Card>
-            <PlaceholderVisual label="[MAP: Office location]" aspect="aspect-[4/3]" />
+            <Card className="p-6">
+              <h2 className="font-heading text-lg font-semibold text-ink">
+                {contactContent.nextSteps.title}
+              </h2>
+              <ol className="mt-4 space-y-3">
+                {contactContent.nextSteps.steps.map((step, index) => (
+                  <li key={step} className="flex items-start gap-3 text-sm text-ink-muted">
+                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary-xlight text-xs font-bold text-primary">
+                      {index + 1}
+                    </span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+            </Card>
           </div>
         </Container>
       </section>

@@ -53,8 +53,8 @@ npm run lint    # eslint
 
 Every page's content lives in a typed object in `/content`, imported by the
 page/section components — layout code never contains literal copy. To
-replace placeholder text (marked `[Placeholder]`, `[SCREENSHOT: ...]`,
-`[LOGO: ...]`, etc.) with real copy, edit the relevant file in `/content`;
+replace placeholder visuals (marked `[SCREENSHOT: ...]`) or other copy,
+edit the relevant file in `/content`;
 you don't need to touch any component.
 
 ### Contact form → real email/CRM

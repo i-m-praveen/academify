@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { UseCaseGrid } from "@/components/sections/UseCaseGrid";
-import { CaseStudyBlock } from "@/components/sections/CaseStudyBlock";
+import { Walkthrough } from "@/components/sections/Walkthrough";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { olympiadSolution } from "@/content/solutions";
@@ -32,10 +32,7 @@ export default function OlympiadOrganizersSolutionPage() {
         description={olympiadSolution.hero.description}
       />
       <UseCaseGrid useCases={olympiadSolution.useCases} />
-      <CaseStudyBlock
-        label={olympiadSolution.caseStudy.label}
-        summary={olympiadSolution.caseStudy.summary}
-      />
+      <Walkthrough walkthrough={olympiadSolution.walkthrough} />
       <CtaBanner
         title="Plan your next Olympiad sitting with Academify"
         description="Talk to us about proctoring, live monitoring, and results — well before your exam date."

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { User } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -58,27 +57,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
-        <Container>
-          <h2 className="text-center font-heading text-2xl font-bold text-ink sm:text-3xl">
-            {aboutContent.team.title}
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-ink-muted">
-            {aboutContent.team.description}
-          </p>
-          <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
-            {aboutContent.team.members.map((member) => (
-              <div key={member.name} className="text-center">
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary-xlight">
-                  <User className="h-8 w-8 text-primary/60" aria-hidden="true" />
-                </div>
-                <p className="mt-3 text-sm font-semibold text-ink">{member.name}</p>
-                <p className="text-xs text-ink-muted">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       <CtaBanner
         title="Want to talk to our team directly?"

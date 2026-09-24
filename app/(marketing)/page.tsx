@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
-import { TrustBar } from "@/components/sections/TrustBar";
+import { AudienceBar } from "@/components/sections/AudienceBar";
 import { CapabilitiesGrid } from "@/components/sections/CapabilitiesGrid";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { ProductVisual } from "@/components/sections/ProductVisual";
-import { Testimonials } from "@/components/sections/Testimonials";
+import { Faq } from "@/components/sections/Faq";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { CtaBanner } from "@/components/sections/CtaBanner";
-import { finalCta } from "@/content/home";
+import { faq, finalCta } from "@/content/home";
+import { JsonLd, faqSchema } from "@/lib/schema";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -26,13 +27,14 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqSchema(faq.items)} />
       <Hero />
-      <TrustBar />
+      <AudienceBar />
       <CapabilitiesGrid />
       <HowItWorks />
       <ProductVisual />
-      <Testimonials />
       <StatsBar />
+      <Faq />
       <CtaBanner
         title={finalCta.title}
         description={finalCta.description}
