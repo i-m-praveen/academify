@@ -23,7 +23,7 @@ export function CtaBanner({
             <LinkButton
               href={cta.href}
               size="lg"
-              className="bg-white text-primary hover:bg-primary-xlight"
+              variant="secondary"
             >
               {cta.label}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
