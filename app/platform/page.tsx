@@ -9,7 +9,7 @@ import { platformHero, platformSections } from "@/content/platform";
 export const metadata: Metadata = {
   title: "Platform Overview",
   description:
-    "Explore Academify's question bank management, test engine, Olympiad hosting, and analytics capabilities for institutional clients.",
+    "Explore Academify's question bank, sectioned test builder, student exam screen, webcam proctoring, live monitoring, and results reporting.",
   alternates: { canonical: "/platform" },
   openGraph: { url: "/platform", title: "Platform Overview | Academify" },
 };
@@ -29,7 +29,7 @@ export default function PlatformPage() {
       ))}
       <CtaBanner
         title="See the full platform in a live walkthrough"
-        description="Book a demo and we'll walk your team through question bank setup, test delivery, and analytics reporting."
+        description="Book a demo and we'll walk your team through question bank setup, test publishing, live proctoring, and finalized results."
         cta={{ label: "Request a Demo", href: "/contact" }}
       />
     </>

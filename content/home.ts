@@ -1,10 +1,10 @@
 import type { LucideIcon } from "lucide-react";
-import { BarChart3, Layers, ListChecks, Trophy } from "lucide-react";
+import { BarChart3, Layers, MonitorCheck, ShieldCheck } from "lucide-react";
 
 export const hero = {
-  headline: "Assessment infrastructure institutions can build on",
+  headline: "Secure online exams for Olympiads and institutions",
   subheadline:
-    "Academify powers large-scale Olympiads, institutional question banks, daily practice, and analytics — one platform your institution or organization can run assessments on, at any scale.",
+    "Academify is a computer-based testing platform: build a question bank, publish sectioned timed tests, proctor and monitor every candidate live, and release finalized results with rankings and Excel reports.",
   primaryCta: { label: "Request a Demo", href: "/contact" },
   secondaryCta: { label: "See how it works", href: "#how-it-works" },
 };
@@ -29,74 +29,74 @@ export type Capability = {
 
 export const capabilities: Capability[] = [
   {
-    icon: Trophy,
-    title: "Olympiad Hosting",
+    icon: ShieldCheck,
+    title: "Proctored Online Exams",
     description:
-      "Run white-labeled Olympiads for your institution or client base, including seasonal editions, at national scale.",
-    href: "/solutions/olympiad-organizers",
+      "Webcam snapshots with face checks, fullscreen enforcement, and tab-switch detection keep every sitting fair.",
+    href: "/platform#proctoring",
+  },
+  {
+    icon: MonitorCheck,
+    title: "Live Candidate Monitoring",
+    description:
+      "Watch every candidate's progress and violation flags in real time while the exam is running.",
+    href: "/platform#proctoring",
   },
   {
     icon: Layers,
-    title: "Question Bank Management",
+    title: "Question Bank & Test Builder",
     description:
-      "Build and maintain a tagged, reusable question repository your teams can draw on across every test format.",
-    href: "/platform",
-  },
-  {
-    icon: ListChecks,
-    title: "Daily Practice & Milestone Tests",
-    description:
-      "Deliver daily-practice sets and periodic milestone tests to keep students on a measurable improvement track.",
-    href: "/solutions/institutes",
+      "Organize questions by subject, topic, and difficulty, then build sectioned tests with negative marking and shuffling.",
+    href: "/platform#question-bank",
   },
   {
     icon: BarChart3,
-    title: "Analytics & Reporting",
+    title: "Results & Reports",
     description:
-      "Give institutes and clients score trends, percentile comparisons, and exportable reports out of the box.",
-    href: "/platform",
+      "Finalize results to compute ranks, review every student's answers, and export full reports to Excel.",
+    href: "/platform#results",
   },
 ];
 
 export const howItWorks = {
   eyebrow: "How it works",
-  title: "From onboarding to insight, in four steps",
+  title: "From setup to finalized results, in four steps",
   description:
-    "Academify is built so institutional clients can go from signed agreement to a fully delivered assessment program without custom engineering work.",
+    "Academify covers the full exam cycle, so your team can run a proctored test without stitching together separate tools.",
   steps: [
     {
       number: "01",
-      title: "Client onboarding",
+      title: "Set up users and classes",
       description:
-        "We configure your branded environment, user roles, and access levels for your institution or organization.",
+        "Bulk-upload students from CSV, organize them into classes and sections, and assign admin and teacher roles.",
     },
     {
       number: "02",
-      title: "Question bank setup",
+      title: "Build your question bank",
       description:
-        "Import or author your question repository, tagged by subject, difficulty, and reuse across test types.",
+        "Add questions one at a time or upload them from Excel, organized by subject, topic, subtopic, and difficulty.",
     },
     {
       number: "03",
-      title: "Test delivery",
+      title: "Publish and proctor the test",
       description:
-        "Launch timed, proctored assessments — from a single-institute practice test to a nationwide Olympiad.",
+        "Create a sectioned, timed test, publish it to the right students, and monitor candidates live as they sit it.",
     },
     {
       number: "04",
-      title: "Analytics",
+      title: "Finalize and report",
       description:
-        "Review performance dashboards, percentile breakdowns, and exportable reports as results come in.",
+        "Finalize results to compute ranks, then share section-wise reports and export them to Excel.",
     },
   ],
 };
 
 export const productVisual = {
   eyebrow: "Product",
-  title: "One dashboard for every stakeholder",
+  title: "One platform for administrators, teachers, and students",
   description:
-    "Administrators, institute coordinators, and students each get a purpose-built view into the same underlying assessment data.",
-  placeholderLabel: "[SCREENSHOT: Analytics dashboard]",
+    "Admins run exams and reports, teachers manage questions and tests, and students get a focused exam screen and their own results.",
+  placeholderLabel: "[SCREENSHOT: Admin dashboard with exam statistics and score distribution]",
 };
 
 export const testimonials = [
@@ -130,6 +130,6 @@ export const stats = [
 export const finalCta = {
   title: "Ready to see Academify in action?",
   description:
-    "Talk to our team about how Academify can support your institution's assessment program or your organization's Olympiad.",
+    "Book a walkthrough of the question bank, exam screen, live proctoring, and results workflow, set up for your institution or Olympiad.",
   cta: { label: "Request a Demo", href: "/contact" },
 };

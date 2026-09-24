@@ -12,13 +12,13 @@ import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
   title: {
-    absolute: `${siteConfig.name} — Assessment Platform for Institutions`,
+    absolute: `${siteConfig.name} — Online Exam & CBT Platform`,
   },
   description: siteConfig.description,
   alternates: { canonical: "/" },
   openGraph: {
     url: "/",
-    title: `${siteConfig.name} — Assessment Platform for Institutions`,
+    title: `${siteConfig.name} — Online Exam & CBT Platform`,
     description: siteConfig.description,
   },
 };

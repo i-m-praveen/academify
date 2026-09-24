@@ -1,8 +1,8 @@
 export const platformHero = {
   eyebrow: "Platform",
-  title: "A single platform for every stage of assessment",
+  title: "One CBT platform, from question bank to finalized results",
   description:
-    "From building a question repository to delivering a proctored test to reporting on results — Academify covers the full assessment lifecycle for institutional clients.",
+    "Author questions, build sectioned tests, deliver them in a secure exam screen, proctor and monitor candidates live, then finalize results and export reports — all in Academify.",
 };
 
 export type PlatformSection = {
@@ -18,57 +18,85 @@ export const platformSections: PlatformSection[] = [
   {
     id: "question-bank",
     eyebrow: "Question Bank",
-    title: "One repository, tagged for reuse",
+    title: "One repository, organized for reuse",
     description:
-      "Institutions build a living question bank that grows more valuable every term, instead of starting from scratch for every test.",
+      "Build a question bank once and draw on it for every test, instead of starting from scratch each time.",
     bullets: [
-      "Tag questions by subject, topic, and difficulty level",
-      "Reuse the same bank across practice tests, milestones, and Olympiads",
-      "Version control and review workflow for question authors",
-      "Bulk import from spreadsheets or existing question sets",
+      "Organize questions by class, subject, topic, and subtopic",
+      "Tag every question with a difficulty level: easy, medium, or hard",
+      "MCQ, text, and match-the-column question types",
+      "Bulk upload from a ready-made Excel template",
     ],
-    placeholderLabel: "[SCREENSHOT: Question bank tagging interface]",
+    placeholderLabel: "[SCREENSHOT: Question bank list with subject/topic filters]",
   },
   {
-    id: "test-engine",
-    eyebrow: "Test Engine",
-    title: "Reliable, timed delivery at any scale",
+    id: "test-builder",
+    eyebrow: "Test Builder",
+    title: "Sectioned tests with your marking scheme",
     description:
-      "The same delivery engine that runs a single classroom quiz can run a multi-state Olympiad sitting, without changing how you author tests.",
+      "Set up a test the way your exam actually works — multiple sections, your own marks, and your own rules.",
     bullets: [
-      "Timed sections with configurable auto-submit",
-      "Continuous auto-save so no student loses progress",
-      "Tab-switch detection and other anti-cheat basics",
-      "Support for objective, multi-select, and numeric-answer formats",
+      "Multiple sections per test, each with its own questions",
+      "Configurable marks per question and negative marking",
+      "Optionally shuffle question order and answer options",
+      "Schedule and publish to a whole class, a section, or individual students",
     ],
-    placeholderLabel: "[SCREENSHOT: Test-taking interface]",
+    placeholderLabel: "[SCREENSHOT: Test builder with sections and marking settings]",
   },
   {
-    id: "olympiad-hosting",
-    eyebrow: "Olympiad Hosting",
-    title: "Multi-client, white-labeled, and seasonal",
+    id: "exam-experience",
+    eyebrow: "Student Experience",
+    title: "An exam screen students find familiar",
     description:
-      "Run Olympiads for multiple client organizations at once, each fully white-labeled, including recurring seasonal editions like summer and winter cycles.",
+      "A clean, mobile-responsive exam interface modelled on the computer-based exams students will sit later.",
     bullets: [
-      "Per-client branding across registration, testing, and reporting",
-      "Support for recurring seasonal editions on a fixed calendar",
-      "Isolated data and question banks per client organization",
-      "Scales from a single school to a nationwide sitting",
+      "Section tabs and a question palette showing answered, unanswered, and marked questions",
+      "Mark for Review and Clear Response on every question",
+      "Answers saved as students go, with automatic submission when time runs out",
+      "A visual post-exam report with section-wise accuracy",
     ],
-    placeholderLabel: "[SCREENSHOT: Multi-client Olympiad admin view]",
+    placeholderLabel: "[SCREENSHOT: Student exam screen with question palette]",
   },
   {
-    id: "analytics",
-    eyebrow: "Analytics",
-    title: "Reporting your stakeholders will actually use",
+    id: "proctoring",
+    eyebrow: "Proctoring & Live Monitoring",
+    title: "Exam integrity you can see as it happens",
     description:
-      "Give institute coordinators and client administrators the reports they need without asking your team to build custom exports.",
+      "Built-in remote proctoring flags suspicious behaviour during the exam, and a live monitor shows every candidate's status in one place.",
     bullets: [
-      "Score trends over time, by student, class, or cohort",
-      "Percentile and cohort comparison across test sittings",
-      "Exportable reports (CSV / PDF) for offline sharing",
-      "Role-based dashboards for admins, coordinators, and students",
+      "Periodic webcam snapshots with face-presence and multiple-face checks",
+      "Fullscreen enforcement and tab-switch detection",
+      "Flags for dev tools, print-screen, page refresh, and network drops",
+      "Live candidate monitor with a violation log for every candidate",
     ],
-    placeholderLabel: "[SCREENSHOT: Analytics dashboard with percentile charts]",
+    placeholderLabel: "[SCREENSHOT: Live candidate monitor with violation flags]",
+  },
+  {
+    id: "results",
+    eyebrow: "Results & Reports",
+    title: "Finalized results, ready to share",
+    description:
+      "When a sitting closes, finalize results to lock in scores, compute ranks, and open up reports for administrators and students.",
+    bullets: [
+      "Finalize Results workflow that computes cohort statistics and ranks",
+      "Per-test score distribution, section-wise breakdown, and student ranking",
+      "Per-student answer review, question by question, with time spent",
+      "Full test reports exported to Excel",
+    ],
+    placeholderLabel: "[SCREENSHOT: Test report with score distribution and rankings]",
+  },
+  {
+    id: "administration",
+    eyebrow: "Administration",
+    title: "Roles and controls for every team member",
+    description:
+      "Give each person the access they need, and onboard whole batches of students in minutes.",
+    bullets: [
+      "Super Admin, Admin, Teacher, and Student roles",
+      "Choose which modules each role can see",
+      "Bulk upload of users from CSV",
+      "Your institution's logo across the platform",
+    ],
+    placeholderLabel: "[SCREENSHOT: User management and role settings]",
   },
 ];

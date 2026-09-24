@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BarChart3, ClipboardList, Globe2, Layers, Repeat, ShieldCheck } from "lucide-react";
+import { BarChart3, Camera, Layers, MonitorCheck, Trophy, Users } from "lucide-react";
 
 export type UseCase = {
   icon: LucideIcon;
@@ -10,79 +10,79 @@ export type UseCase = {
 export const institutesSolution = {
   hero: {
     eyebrow: "For Institutes",
-    title: "Daily practice, question banks, and analytics — under your own name",
+    title: "Question banks, class-wise tests, and clear reports for your students",
     description:
-      "Schools and coaching institutes use Academify to run their own practice-testing program: build a shared question bank, deliver daily and milestone tests, and see exactly where each student stands.",
+      "Schools and coaching institutes use Academify to run their own computer-based tests: build a shared question bank, publish tests to the right classes, and see exactly where each student stands.",
   },
   useCases: [
     {
       icon: Layers,
       title: "Build a lasting question bank",
       description:
-        "Your teaching staff tag and organize questions once, then reuse them across daily practice, milestones, and mock tests.",
+        "Teachers organize questions by subject, topic, subtopic, and difficulty once, then reuse them across every test.",
     },
     {
-      icon: ClipboardList,
-      title: "Run daily practice at scale",
+      icon: Users,
+      title: "Publish tests to the right students",
       description:
-        "Assign short daily-practice sets automatically, without manually creating and distributing a new test every day.",
+        "Assign a test to a whole class, a single section, or individual students, and schedule when it opens.",
     },
     {
-      icon: Repeat,
-      title: "Track progress with milestone tests",
+      icon: MonitorCheck,
+      title: "Prepare students for real CBT exams",
       description:
-        "Schedule periodic milestone tests to check retention and readiness ahead of major exams or Olympiads.",
+        "Section tabs, a question palette, Mark for Review, and negative marking mirror the computer-based exams students will face.",
     },
     {
       icon: BarChart3,
       title: "See performance clearly",
       description:
-        "Coordinators get cohort-level dashboards; students and parents get individual progress reports.",
+        "Admins get score distributions and section-wise breakdowns; students get their own post-exam report with section accuracy.",
     },
   ] as UseCase[],
   caseStudy: {
     label: "[CASE STUDY: Placeholder Institute Name]",
     summary:
-      "[Placeholder] A mid-sized coaching institute consolidated its question bank and daily-practice workflow onto Academify, replacing a mix of spreadsheets and printed tests.",
+      "[Placeholder] A mid-sized coaching institute moved its question bank and mock tests onto Academify, replacing a mix of spreadsheets and printed tests.",
   },
 };
 
 export const olympiadSolution = {
   hero: {
     eyebrow: "For Olympiad Organizers",
-    title: "Run your Olympiad end-to-end, fully white-labeled",
+    title: "Run proctored Olympiad sittings with confidence",
     description:
-      "Academify gives Olympiad-conducting organizations the infrastructure to run branded competitions at scale — registration, delivery, and results — without building a testing platform in-house.",
+      "Academify gives Olympiad-conducting organizations a ready computer-based testing platform — secure delivery, remote proctoring, live monitoring, and ranked results — without building one in-house.",
   },
   useCases: [
     {
-      icon: Globe2,
-      title: "Fully white-labeled experience",
+      icon: Camera,
+      title: "Remote proctoring built in",
       description:
-        "Your branding, your domain presence, your certificates — Academify runs underneath as the assessment engine.",
+        "Webcam snapshots with face checks, fullscreen enforcement, and tab-switch detection flag suspicious behaviour during every sitting.",
     },
     {
-      icon: Repeat,
-      title: "Seasonal editions, handled natively",
+      icon: MonitorCheck,
+      title: "Live monitoring on exam day",
       description:
-        "Configure recurring seasonal cycles — such as summer and winter editions — as first-class, repeatable programs.",
+        "Follow every candidate's status and violation log in real time from a single live-monitor view.",
     },
     {
-      icon: ShieldCheck,
-      title: "Built for scale and integrity",
+      icon: Trophy,
+      title: "Finalized results and rankings",
       description:
-        "Timed delivery, auto-save, and anti-cheat basics designed to hold up across thousands of simultaneous participants.",
+        "Finalize results once the sitting closes to lock scores, compute ranks, and enable peer comparison.",
     },
     {
       icon: BarChart3,
-      title: "Results and reporting, ready to share",
+      title: "Reports ready to share",
       description:
-        "Generate percentile rankings, merit lists, and exportable reports for participating institutions immediately after each sitting.",
+        "Score distribution, section-wise analysis, and per-student answer review — with full reports exported to Excel.",
     },
   ] as UseCase[],
   caseStudy: {
     label: "[CASE STUDY: Placeholder Olympiad Program]",
     summary:
-      "[Placeholder] An Olympiad-conducting organization moved a multi-city competition onto Academify to support seasonal editions without added engineering overhead.",
+      "[Placeholder] An Olympiad-conducting organization moved its competition onto Academify to run proctored online sittings and publish ranked results faster.",
   },
 };

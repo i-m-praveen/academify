@@ -9,7 +9,7 @@ import { institutesSolution } from "@/content/solutions";
 export const metadata: Metadata = {
   title: "For Institutes",
   description:
-    "Run daily practice tests, milestone assessments, and a shared question bank for your school or coaching institute with Academify.",
+    "Build a shared question bank, publish class-wise computer-based tests, and get section-wise student reports for your school or coaching institute.",
   alternates: { canonical: "/solutions/institutes" },
   openGraph: { url: "/solutions/institutes", title: "For Institutes | Academify" },
 };
@@ -34,8 +34,8 @@ export default function InstitutesSolutionPage() {
         summary={institutesSolution.caseStudy.summary}
       />
       <CtaBanner
-        title="Bring your institute's testing program onto one platform"
-        description="Request a demo to see the question bank, daily practice, and analytics workflow in action."
+        title="Bring your institute's tests onto one platform"
+        description="Request a demo to see the question bank, test publishing, and student reports in action."
         cta={{ label: "Request a Demo", href: "/contact" }}
       />
     </>

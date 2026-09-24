@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Academify",
   legalName: "Academify",
-  tagline: "Assessment infrastructure for institutions",
+  tagline: "Secure online exams for Olympiads and institutions",
   description:
-    "Academify is an assessment platform that powers Olympiads, institutional question banks, daily practice tests, and analytics for schools, coaching institutes, and education organizations.",
+    "Academify is a computer-based testing (CBT) platform for Olympiads, schools, and coaching institutes: question banks, sectioned timed tests, webcam proctoring, live candidate monitoring, and finalized results with rankings and Excel reports.",
   url: "https://www.academify.example",
   ogImage: "/og-image.png",
   email: "hello@academify.example",
@@ -35,12 +35,12 @@ export const solutionsNav: NavLink[] = [
   {
     label: "For Institutes",
     href: "/solutions/institutes",
-    description: "Daily practice, question banks, and analytics for your own students.",
+    description: "Question banks, class-wise tests, and detailed student reports.",
   },
   {
     label: "For Olympiad Organizers",
     href: "/solutions/olympiad-organizers",
-    description: "End-to-end, white-labeled Olympiad hosting at scale.",
+    description: "Proctored Olympiad sittings with live monitoring and ranked results.",
   },
 ];
 

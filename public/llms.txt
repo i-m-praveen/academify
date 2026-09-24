@@ -1,23 +1,31 @@
 # Academify
 
-> Academify is a B2B assessment platform and infrastructure provider for
-> schools, coaching institutes, and education organizations. It is not a
-> single-event Olympiad site — Olympiad hosting is one capability among
-> several.
+> Academify is a B2B computer-based testing (CBT) platform for schools,
+> coaching institutes, and Olympiad-conducting organizations. It covers the
+> full exam cycle: question bank, test building, a secure student exam
+> screen, remote proctoring, live monitoring, and finalized results.
 
 ## What Academify does
 
-- **Olympiad hosting**: white-labeled, multi-client Olympiad delivery for
-  institutions and organizations, including recurring seasonal editions
-  (e.g. summer and winter cycles).
-- **Institutional question bank management**: schools and institutes build
-  and maintain their own tagged, reusable question repositories, organized
-  by subject, topic, and difficulty.
-- **Daily practice and milestone tests**: recurring practice assessments and
-  periodic milestone tests for students, delivered and scored automatically.
-- **Analytics and reporting**: score trends, percentile and cohort
-  comparisons, and exportable reports for institutes and client
-  organizations.
+- **Question bank management**: questions organized by class, subject,
+  topic, subtopic, and difficulty; MCQ, text, and match-the-column types;
+  bulk upload from an Excel template.
+- **Test builder**: multi-section tests with configurable marks, negative
+  marking, and optional question/option shuffling; scheduled and published
+  to a class, a section, or individual students.
+- **Student exam screen**: mobile-responsive interface with section tabs, a
+  question palette, Mark for Review, Clear Response, answers saved as the
+  student goes, and auto-submit when time expires.
+- **Proctoring and live monitoring**: periodic webcam snapshots with
+  face-presence and multiple-face checks, fullscreen enforcement, tab-switch
+  detection, and flags for dev tools, print-screen, page refresh, and
+  network drops; a live monitor shows each candidate's status and violations.
+- **Results and reports**: a Finalize Results workflow that computes cohort
+  statistics and ranks; score distribution, section-wise breakdown, student
+  ranking, per-student answer review with time spent, and Excel export.
+- **Administration**: Super Admin, Admin, Teacher, and Student roles,
+  per-role module visibility, bulk user upload from CSV, and institution
+  logo branding.
 
 ## Audience
 

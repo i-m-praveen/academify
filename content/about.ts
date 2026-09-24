@@ -3,13 +3,13 @@ export const aboutContent = {
     eyebrow: "About Academify",
     title: "Assessment infrastructure, built for institutions",
     description:
-      "Academify exists to give schools, coaching institutes, and Olympiad-conducting organizations the same caliber of assessment technology previously available only to large exam boards.",
+      "Academify gives schools, coaching institutes, and Olympiad-conducting organizations secure computer-based testing, with the proctoring and reporting previously available only to large exam boards.",
   },
   mission: {
     title: "Our mission",
     body: [
       "[Placeholder] Academify started from a simple observation: institutions running assessments — whether a weekly practice test or a nationwide Olympiad — were relying on a patchwork of spreadsheets, generic form tools, and one-off vendors.",
-      "[Placeholder] We build the infrastructure layer instead: a single platform for question banks, test delivery, and analytics, so institutions can focus on the assessment content, not the plumbing underneath it.",
+      "[Placeholder] We build the infrastructure layer instead: a single platform for question banks, proctored test delivery, and results, so institutions can focus on the assessment content, not the plumbing underneath it.",
     ],
   },
   values: [

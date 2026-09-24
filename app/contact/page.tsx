@@ -12,7 +12,7 @@ import { siteConfig } from "@/content/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Request a demo or get in touch with the Academify team about Olympiad hosting, question banks, or daily practice and analytics.",
+    "Request a demo or get in touch with the Academify team about proctored Olympiad sittings, question banks, online tests, or results reporting.",
   alternates: { canonical: "/contact" },
   openGraph: { url: "/contact", title: "Contact Us | Academify" },
 };

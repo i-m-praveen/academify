@@ -10,7 +10,7 @@ import { aboutContent } from "@/content/about";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Academify's mission to build assessment infrastructure for schools, coaching institutes, and Olympiad organizers.",
+    "Learn about Academify's mission to bring secure computer-based testing to schools, coaching institutes, and Olympiad organizers.",
   alternates: { canonical: "/about" },
   openGraph: { url: "/about", title: "About Us | Academify" },
 };

@@ -22,7 +22,7 @@ export function softwareApplicationSchema() {
     applicationCategory: "EducationalApplication",
     operatingSystem: "Web",
     description:
-      "Assessment platform for institutional Olympiad hosting, question bank management, daily practice and milestone testing, and analytics.",
+      "Computer-based testing platform with question bank management, sectioned timed tests, webcam proctoring, live candidate monitoring, and finalized results with rankings and Excel reports.",
     offers: {
       "@type": "Offer",
       category: "B2B",

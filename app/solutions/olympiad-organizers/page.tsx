@@ -9,7 +9,7 @@ import { olympiadSolution } from "@/content/solutions";
 export const metadata: Metadata = {
   title: "For Olympiad Organizers",
   description:
-    "Host white-labeled Olympiads at scale, including seasonal editions, with Academify's assessment infrastructure.",
+    "Run proctored online Olympiad sittings with webcam proctoring, live candidate monitoring, finalized rankings, and Excel reports.",
   alternates: { canonical: "/solutions/olympiad-organizers" },
   openGraph: {
     url: "/solutions/olympiad-organizers",
@@ -37,8 +37,8 @@ export default function OlympiadOrganizersSolutionPage() {
         summary={olympiadSolution.caseStudy.summary}
       />
       <CtaBanner
-        title="Plan your next Olympiad edition with Academify"
-        description="Talk to us about seasonal cycles, white-labeling, and scale — before your next registration window opens."
+        title="Plan your next Olympiad sitting with Academify"
+        description="Talk to us about proctoring, live monitoring, and results — well before your exam date."
         cta={{ label: "Request a Demo", href: "/contact" }}
       />
     </>
