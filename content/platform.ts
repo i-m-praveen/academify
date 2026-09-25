@@ -12,6 +12,7 @@ export type PlatformSection = {
   description: string;
   bullets: string[];
   placeholderLabel: string;
+  imageSrc?: string;
 };
 
 export const platformSections: PlatformSection[] = [
@@ -28,6 +29,7 @@ export const platformSections: PlatformSection[] = [
       "Bulk upload from a ready-made Excel template",
     ],
     placeholderLabel: "[SCREENSHOT: Question bank list with subject/topic filters]",
+    imageSrc: "/screenshots/question-bank.png",
   },
   {
     id: "test-builder",
@@ -42,6 +44,7 @@ export const platformSections: PlatformSection[] = [
       "Schedule and publish to a whole class, a section, or individual students",
     ],
     placeholderLabel: "[SCREENSHOT: Test builder with sections and marking settings]",
+    imageSrc: "/screenshots/test-builder.png",
   },
   {
     id: "exam-experience",
@@ -56,6 +59,7 @@ export const platformSections: PlatformSection[] = [
       "A visual post-exam report with section-wise accuracy",
     ],
     placeholderLabel: "[SCREENSHOT: Student exam screen with question palette]",
+    imageSrc: "/screenshots/exam-screen.png",
   },
   {
     id: "proctoring",
@@ -70,6 +74,7 @@ export const platformSections: PlatformSection[] = [
       "Live candidate monitor with a violation log for every candidate",
     ],
     placeholderLabel: "[SCREENSHOT: Live candidate monitor with violation flags]",
+    imageSrc: "/screenshots/live-monitor.png",
   },
   {
     id: "results",
@@ -84,6 +89,7 @@ export const platformSections: PlatformSection[] = [
       "Full test reports exported to Excel",
     ],
     placeholderLabel: "[SCREENSHOT: Test report with score distribution and rankings]",
+    imageSrc: "/screenshots/results-rankings.png",
   },
   {
     id: "administration",
@@ -98,5 +104,6 @@ export const platformSections: PlatformSection[] = [
       "Your institution's logo across the platform",
     ],
     placeholderLabel: "[SCREENSHOT: User management and role settings]",
+    imageSrc: "/screenshots/user-management.png",
   },
 ];

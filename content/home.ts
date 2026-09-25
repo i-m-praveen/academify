@@ -95,6 +95,7 @@ export const productVisual = {
   description:
     "Admins run exams and reports, teachers manage questions and tests, and students get a focused exam screen and their own results.",
   placeholderLabel: "[SCREENSHOT: Admin dashboard with exam statistics and score distribution]",
+  imageSrc: "/screenshots/admin-dashboard.png",
 };
 
 export const faq = {

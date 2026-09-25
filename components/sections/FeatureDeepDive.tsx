@@ -36,7 +36,7 @@ export function FeatureDeepDive({
           </ul>
         </div>
         <Reveal>
-          <PlaceholderVisual label={section.placeholderLabel} />
+          <PlaceholderVisual label={section.placeholderLabel} src={section.imageSrc} />
         </Reveal>
       </Container>
     </section>

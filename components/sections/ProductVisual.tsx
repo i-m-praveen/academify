@@ -17,7 +17,7 @@ export function ProductVisual() {
           <p className="mt-4 text-lg text-ink-muted">{productVisual.description}</p>
         </div>
         <Reveal>
-          <PlaceholderVisual label={productVisual.placeholderLabel} />
+          <PlaceholderVisual label={productVisual.placeholderLabel} src={productVisual.imageSrc} />
         </Reveal>
       </Container>
     </section>
