@@ -57,26 +57,18 @@ replace placeholder visuals (marked `[SCREENSHOT: ...]`) or other copy,
 edit the relevant file in `/content`;
 you don't need to touch any component.
 
-### Contact form → real email/CRM
+### Contact form
 
-The "Request a Demo" form (`/contact`) posts to `app/api/contact/route.ts`.
-Right now that route only validates the payload and does:
+The "Request a Demo" form (`/contact`) posts JSON to `/contact.php` (`public/contact.php`), which
+validates the fields and emails them to `siteConfig.email` using PHP `mail()`. The recipient is
+injected at build time by `scripts/postbuild.mjs`. It does not work under `npm run dev` (no PHP);
+test it on the host or with `php -S localhost:8000 -t out`.
 
-```ts
-console.log("[contact-form] New demo request:", parsed.data);
-```
+## Deploying to PHP hosting (Hostinger, cPanel, ...)
 
-To wire it up for real, replace that `TODO` block with either:
-
-- **An email service** (e.g. [Resend](https://resend.com/docs)) — send a
-  notification email to your sales inbox with `parsed.data`.
-- **A CRM webhook** (HubSpot, Salesforce, etc.) — `fetch()` POST
-  `parsed.data` to the CRM's lead-capture endpoint.
-
-Add the necessary API key / webhook URL as an environment variable — see
-`.env.example` for the expected shape — and read it via
-`process.env.YOUR_VAR` inside the route handler. Never commit real
-credentials; `.env.local` is gitignored.
+1. Set the real `url` and `email` in `content/site.ts`.
+2. Run `npm run build`. The static site, `contact.php` and `.htaccess` are written to `out/`.
+3. Upload the **contents** of `out/` (including the hidden `.htaccess`) into `public_html`.
 
 ### Analytics
 

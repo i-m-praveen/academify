@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/content/site";
 import { getPostSlugs } from "@/lib/mdx";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
