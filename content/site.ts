@@ -7,7 +7,7 @@ export const siteConfig = {
   url: "https://www.academify.online",
   ogImage: "/og-image.png",
   email: "teamacademify@gmail.com",
-  phone: "+91 00000 00000",
+  phone: "+91-6388783545",
   social: {
     linkedin: "",
     twitter: "",
