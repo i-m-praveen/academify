@@ -21,3 +21,12 @@ if (fs.existsSync(llmsPath)) {
 }
 
 console.log(`postbuild: contact.php -> ${email}; site url -> ${url}`);
+
+// Keep real SMTP credentials out of the web root: move smtp-config.php to ./deploy-private (gitignored)
+// so it is uploaded ONE LEVEL ABOVE public_html instead of inside it.
+const smtpSrc = path.join("out", "smtp-config.php");
+if (fs.existsSync(smtpSrc)) {
+  fs.mkdirSync("deploy-private", { recursive: true });
+  fs.renameSync(smtpSrc, path.join("deploy-private", "smtp-config.php"));
+  console.log("postbuild: smtp-config.php moved to ./deploy-private (upload above public_html)");
+}
