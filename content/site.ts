@@ -4,14 +4,14 @@ export const siteConfig = {
   tagline: "Secure online exams for Olympiads and institutions",
   description:
     "Academify is a computer-based testing (CBT) platform for Olympiads, schools, and coaching institutes: question banks, sectioned timed tests, webcam proctoring, live candidate monitoring, and finalized results with rankings and Excel reports.",
-  url: "https://www.academify.example",
+  url: "https://www.academify.online",
   ogImage: "/og-image.png",
-  email: "hello@academify.example",
+  email: "teamacademify@gmail.com",
   phone: "+91 00000 00000",
   social: {
-    linkedin: "https://www.linkedin.com/company/academify",
-    twitter: "https://twitter.com/academify",
-    facebook: "https://www.facebook.com/academify",
+    linkedin: "",
+    twitter: "",
+    facebook: "",
   },
   // TODO: Replace with real GA4 / Plausible tracking ID before launch.
   analyticsId: "",
