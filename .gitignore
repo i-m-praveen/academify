@@ -36,3 +36,4 @@ next-env.d.ts
 # SMTP credentials
 smtp-config.php
 deploy-private/
+deploy-site.zip
