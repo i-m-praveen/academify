@@ -10,6 +10,6 @@ return [
     'username'   => 'noreply@yourdomain.com',
     'password'   => 'YOUR_SMTP_PASSWORD',
     'from_email' => 'noreply@yourdomain.com',   // usually the same as username
-    'from_name'  => 'Academify Website',
-    'to_email'   => '',                  // optional: overrides the recipient baked in at build time
+    'from_name'  => 'Academify Team',
+    'to_email'   => ['you@gmail.com', 'teammate@gmail.com'],  // one or more recipients (array, or a comma-separated string)
 ];

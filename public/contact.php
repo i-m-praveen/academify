@@ -73,7 +73,13 @@ function smtp_cmd($fp, string $cmd, array $ok): void {
     if (!in_array((int)substr($r, 0, 3), $ok, true)) throw new RuntimeException('SMTP error: ' . trim($r));
 }
 
-function smtp_send(array $c, string $to, string $subject, string $body, string $replyName, string $replyEmail): void {
+// Accepts an array or a comma/semicolon-separated string; returns only valid, de-duplicated addresses.
+function parse_recipients($v): array {
+    $list = is_array($v) ? $v : preg_split('/[,;\s]+/', (string)$v);
+    return array_values(array_unique(array_filter(array_map("trim", $list), fn($a) => filter_var($a, FILTER_VALIDATE_EMAIL))));
+}
+
+function smtp_send(array $c, array $recipients, string $subject, string $body, string $replyName, string $replyEmail): void {
     $port = (int)($c['port'] ?? 465);
     $enc  = strtolower($c['encryption'] ?? ($port === 465 ? 'ssl' : 'tls'));
     $fp = @stream_socket_client(($enc === 'ssl' ? 'ssl://' : 'tcp://') . $c['host'] . ':' . $port, $errno, $errstr, 15);
@@ -94,11 +100,11 @@ function smtp_send(array $c, string $to, string $subject, string $body, string $
         smtp_cmd($fp, base64_encode($c['username']), [334]);
         smtp_cmd($fp, base64_encode($c['password'] ?? ''), [235]);
         smtp_cmd($fp, "MAIL FROM:<$fromEmail>", [250]);
-        smtp_cmd($fp, "RCPT TO:<$to>", [250, 251]);
+        foreach ($recipients as $r) smtp_cmd($fp, "RCPT TO:<$r>", [250, 251]);
         smtp_cmd($fp, 'DATA', [354]);
         $msg = 'From: =?UTF-8?B?' . base64_encode($fromName) . "?= <$fromEmail>\r\n"
              . 'Reply-To: =?UTF-8?B?' . base64_encode($replyName) . "?= <$replyEmail>\r\n"
-             . "To: <$to>\r\n"
+             . "To: " . implode(", ", array_map(fn($r) => "<$r>", $recipients)) . "\r\n"
              . 'Subject: =?UTF-8?B?' . base64_encode($subject) . "?=\r\n"
              . 'Date: ' . date('r') . "\r\n"
              . "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n"
@@ -120,7 +126,9 @@ $body = "New demo request from the website\n\n"
 $smtp = load_smtp_config();
 if ($smtp) {
     try {
-        smtp_send($smtp, !empty($smtp['to_email']) ? $smtp['to_email'] : RECIPIENT, $subject, $body, $name, $email);
+        $to = parse_recipients(!empty($smtp["to_email"]) ? $smtp["to_email"] : RECIPIENT);
+        if (!$to) throw new RuntimeException("No valid recipient configured");
+        smtp_send($smtp, $to, $subject, $body, $name, $email);
     } catch (Throwable $e) {
         error_log('contact.php: ' . $e->getMessage());
         respond(500, ['error' => 'Unable to send message.']);
