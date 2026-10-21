@@ -131,7 +131,7 @@ if ($smtp) {
         smtp_send($smtp, $to, $subject, $body, $name, $email);
     } catch (Throwable $e) {
         error_log('contact.php: ' . $e->getMessage());
-        respond(500, ['error' => 'Unable to send message.']);
+        respond(500, ['error' => 'Unable to send message.'] + (!empty($smtp['debug']) ? ['detail' => $e->getMessage()] : []));
     }
     respond(200, ['ok' => true]);
 }
