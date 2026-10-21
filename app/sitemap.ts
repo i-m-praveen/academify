@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/content/site";
-import { getPostSlugs } from "@/lib/mdx";
 
 export const dynamic = "force-static";
 
@@ -12,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solutions/olympiad-organizers",
     "/about",
     "/contact",
-    "/blog",
   ].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified: new Date(),
@@ -20,12 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "" ? 1 : 0.7,
   }));
 
-  const postRoutes = getPostSlugs().map((slug) => ({
-    url: `${siteConfig.url}/blog/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "yearly" as const,
-    priority: 0.5,
-  }));
+  // Blog is hidden for now (app/_blog is not routed); re-add its routes when it goes live.
 
-  return [...staticRoutes, ...postRoutes];
+  return staticRoutes;
 }

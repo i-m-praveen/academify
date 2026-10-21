@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Home, Menu, X } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { LinkButton } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -24,6 +24,14 @@ export function Header() {
         <Logo />
 
         <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
+          <Link
+            href="/"
+            aria-label="Home"
+            title="Home"
+            className="text-ink hover:text-primary focus-ring rounded-xs"
+          >
+            <Home className="h-5 w-5" aria-hidden="true" />
+          </Link>
           <Link
             href="/platform"
             className="text-sm font-medium text-ink hover:text-primary focus-ring rounded-xs"
@@ -98,6 +106,10 @@ export function Header() {
       {mobileOpen ? (
         <div id="mobile-nav" className="border-t border-border bg-white lg:hidden">
           <Container className="flex flex-col gap-1 py-4">
+            <Link href="/" className="flex items-center gap-2 rounded-sm px-3 py-3 text-base font-medium hover:bg-primary-xlight focus-ring">
+              <Home className="h-5 w-5" aria-hidden="true" />
+              Home
+            </Link>
             <Link href="/platform" className="rounded-sm px-3 py-3 text-base font-medium hover:bg-primary-xlight focus-ring">
               Platform
             </Link>

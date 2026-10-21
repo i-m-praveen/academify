@@ -41,7 +41,6 @@ large-scale assessments for their students or member institutions.
 - For Olympiad organizers: https://www.academify.example/solutions/olympiad-organizers
 - About: https://www.academify.example/about
 - Contact / request a demo: https://www.academify.example/contact
-- Blog: https://www.academify.example/blog
 
 ## Contact
 
